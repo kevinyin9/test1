@@ -1,0 +1,36 @@
+DROP TABLE IF EXISTS `TRADE`;
+CREATE TABLE `TRADE` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` varchar(50) NOT NULL DEFAULT '',
+  `isBuyerMaker` varchar(10) NOT NULL DEFAULT '',
+  `price` float NOT NULL,
+  `quantity` float NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+DROP TABLE IF EXISTS `ORDERBOOK_200`;
+CREATE TABLE `ORDERBOOK_200` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` varchar(50) NOT NULL DEFAULT '',
+  `data` varchar(8000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ORDERBOOK_10`;
+CREATE TABLE `ORDERBOOK_10` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` varchar(50) NOT NULL DEFAULT '',
+  `data` varchar(8000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+DROP TABLE IF EXISTS `ORDERBOOK_TOP10`;
+CREATE TABLE `ORDERBOOK_TOP10` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `timestamp` varchar(50) NOT NULL DEFAULT '',
+  `data` varchar(8000) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
